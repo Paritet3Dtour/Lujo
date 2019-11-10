@@ -1,0 +1,39 @@
+@font-face {
+font-family: 'Museo Bold';
+src: url('../fonts/museo/MuseoSansCyrl-700.eot');
+src: url('../fonts/museo/MuseoSansCyrl-700.eot?#iefix') format('embedded-opentype'),
+url('../fonts/museo/MuseoSansCyrl-700.woff') format('woff'),
+url('../fonts/museo/MuseoSansCyrl-700.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Museo Regular';
+src: url('../fonts/museo/MuseoSansCyrl-300.eot');
+src: url('../fonts/museo/MuseoSansCyrl-300.eot?#iefix') format('embedded-opentype'),
+url('../fonts/museo/MuseoSansCyrl-300.woff') format('woff'),
+url('../fonts/museo/MuseoSansCyrl-300.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Museo Medium';
+src: url('../fonts/museo/MuseoSansCyrl-500.eot');
+src: url('../fonts/museo/MuseoSansCyrl-500.eot?#iefix') format('embedded-opentype'),
+url('../fonts/museo/MuseoSansCyrl-500.woff') format('woff'),
+url('../fonts/museo/MuseoSansCyrl-500.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Museo Light';
+src: url('../fonts/museo/MuseoSansCyrl-100.eot');
+src: url('../fonts/museo/MuseoSansCyrl-100.eot?#iefix') format('embedded-opentype'),
+url('../fonts/museo/MuseoSansCyrl-100.woff') format('woff'),
+url('../fonts/museo/MuseoSansCyrl-100.ttf') format('truetype');   
+font-weight: normal;
+font-style: normal;
+}

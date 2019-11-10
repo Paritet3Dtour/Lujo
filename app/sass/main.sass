@@ -1,0 +1,1771 @@
+
+// MAIN ELEMENTS
+$regular_font: 'Museo Regular', Arial, sans-serif 
+$bold_font: 'Museo Bold', Arial, sans-serif
+$medium_font: 'Museo Medium', Arial, sans-serif
+$light_font: 'Museo Light', Arial, sans-serif
+
+section, div 
+  box-sizing: border-box   
+
+body 
+  background-color: #fff
+  font-family: $regular_font 
+  overflow-x: hidden
+
+section
+  overflow: hidden
+
+
+input
+  box-sizing: border-box
+small
+  vertical-align: baseline
+
+h2
+  font-size: 48px
+  line-height: 58px
+  color: #141618
+  font-family: $medium_font
+
+.mainContainer
+  width: 1171px
+  margin: 0 auto
+  position: relative
+
+.main-btn
+  font-family: $medium_font 
+  z-index: 1
+  position: relative
+  overflow: hidden
+  display: inline-block
+  background-color: #1D1954
+  color: #fff
+  font-size: 16px 
+  border: none
+  outline: none
+  &:before
+    content: '' 
+    z-index: -1 
+    position: absolute 
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background-color: #141618
+    transform-origin: center left
+    transform: scaleX(0)
+    transition: transform 0.25s ease-in-out
+  img
+    margin-left: 5px
+  &:hover
+    &:before
+      transform-origin: center right 
+      transform: scaleX(1) 
+  svg
+    margin-left: 10px
+    width: 22px  
+    height: 22px 
+    vertical-align: sub 
+    path
+      fill: #fff
+
+.other-btn
+  font-family: $bold_font 
+  z-index: 1
+  position: relative
+  overflow: hidden
+  display: inline-block
+  background-color: #F8F8F8
+  color: #1D1954
+  font-size: 16px 
+  border: none
+  outline: none
+  &:before
+    content: ''  
+    z-index: -1 
+    position: absolute  
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background-color: #1D1954
+    transform-origin: center left
+    transform: scaleX(0)
+    transition: transform 0.25s ease-in-out
+  img
+    margin-left: 5px
+  svg
+    margin-left: 10px
+    width: 22px  
+    height: 22px 
+    vertical-align: sub 
+    path
+      fill: #1D1954
+  &:hover
+    color: #F8F8F8
+    &:before
+      transform-origin: center right 
+      transform: scaleX(1) 
+    svg
+      path
+        fill: #fff
+
+.animation-fadeInOut
+  animation: fadeinout 3s infinite
+  opacity: .2
+  transition: all 0.3s 
+  &:hover
+    opacity: 1
+
+@keyframes fadeinout
+  50%
+    opacity: .9
+
+.animation-element
+  opacity: 0
+  -webkit-transform: translateX(-.50rem)
+  transform: translateX(-.50rem)
+  -webkit-transition: opacity 2s ease, -webkit-transform 1.5s ease
+  transition: opacity 2s ease, -webkit-transform 1.5s ease
+  transition: opacity 2s ease, transform 1.5s ease
+  transition: opacity 2s ease, transform 1.5s ease, -webkit-transform 1.5s ease
+
+.animation-element
+  -webkit-transition-delay: .2s
+  transition-delay: .2s    
+
+.animation-element.in-view
+  opacity: 1
+  -webkit-transform: translateX(0)
+  transform: translateX(0)
+
+.remodal-overlay
+  background: rgba(0, 0, 0, .8)
+
+label.error
+  display: none !important
+
+.lg-outer .lg-thumb
+  margin: 0 auto
+
+// HEADER
+header
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
+  z-index: 20
+  box-shadow: 0px 0px 7px -1px rgba(0, 0, 0, 0.3)  
+.header__wrapp
+  height: 100px
+  background-color: #fff
+  display: flex
+  justify-content: space-between
+  align-items: center
+  overflow: hidden
+
+.header__contact
+  width: 38.75% 
+  height: 100%
+.header__contact__buy
+  width: 50.2%
+  display: inline-block
+  height: 100%
+.header__contact__phone
+  width: 49%   
+  display: inline-block
+  height: 100%
+  text-align: center 
+  line-height: 100px
+  font-size: 16px
+  font-family: $bold_font
+  color: #141618
+  img
+    margin-right: 9px
+
+.header__nav
+  width: 33%  
+.header__logo
+  width: 10%
+  background-image: url('../img/logo.svg')
+  background-repeat: no-repeat
+  background-position: center center 
+  height: 100%
+ 
+.header__nav
+  height: 100%
+  display: flex
+  justify-content: flex-start
+  li
+    height: 100%
+    display: inline-block 
+    transition: all 0.3s
+    padding-left: 10px
+    padding-right: 10px
+    &:last-child
+      margin-right: 0
+    &:hover
+      a:after
+        opacity: 1
+    a
+      line-height: 100px
+      font-size: 16px
+      color: #1D1954
+      font-family: $bold_font
+      height: 100%
+      display: inline-block
+      position: relative
+      &:after
+        content: ''
+        width: 100%
+        height: 1px
+        display: block
+        left: 0
+        bottom: 30px
+        background-color: #1D1954
+        position: absolute
+        opacity: 0
+        transition: all 0.3s 
+
+// BANNER
+.banner  
+  height: 830px 
+  margin-top: 90px  
+  background-image: url('../img/banner.jpg')
+  background-repeat: no-repeat
+  background-position: center center
+  overflow: hidden
+  position: relative
+  .mainContainer
+    height: 100%
+  video
+    width: 100%
+    height: 100%
+    -o-object-fit: cover
+    object-fit: cover
+    font-family: 'object-fit: cover;'
+    position: absolute
+    top: 0
+    left: 0
+.banner__shadow
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background: rgba(0, 0, 0, 0.4) 
+  z-index: 1
+.banner_content
+  height: 100%
+  display: flex
+  flex-direction: column
+  justify-content: center
+  position: relative
+  z-index: 2
+  h1
+    font-size: 72px
+    line-height: 86px
+    color: #F8F8F8
+    margin-bottom: 42px
+    font-family: $medium_font
+  h2
+    font-size: 18px  
+    line-height: 27px  
+    color: #F8F8F8
+    font-family: $light_font  
+.video__muut
+  position: absolute
+  bottom: 75px
+  right: 85px
+  z-index: 2
+  cursor: pointer
+.mutedOn
+  &:before
+    position: absolute
+    content: ''
+    width: 39px 
+    height: 1px
+    background-color: #fff
+    top: 11px
+    left: -8px
+
+// ABOUT-HOTEL
+.about-hotel
+  background-color: #141618
+  padding-top: 200px
+.about-hotel__wrapp
+  margin-bottom: 165px
+  display: flex
+  align-items: center
+.about-hotel__wrapp__text
+  width: 370px
+  h2
+    color: #F8F8F8
+    margin-bottom: 20px
+  p
+    font-size: 16px  
+    line-height: 27px
+    color: #858585
+    font-family: $light_font  
+.about-hotel__wrapp__gallery__item
+  width: 270px
+  height: 480px 
+  margin-right: 30px
+  position: relative
+  padding: 379px 30px 10px 30px
+  background-repeat: no-repeat
+  background-position: center center
+  background-size: cover 
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.765) 0%, rgba(0, 0, 0, 0.297) 48.82%) 
+.video-gallery .about-hotel__wrapp__gallery__item
+  cursor: pointer
+.video-gallery .about-hotel__wrapp__gallery__item:after
+  background: url('../img/videoplay.svg'), linear-gradient(0deg, rgba(0, 0, 0, 0.765) 0%, rgba(0, 0, 0, 0.297) 48.82%) 
+  background-repeat: no-repeat
+  background-position: center center  
+.about-hotel__wrapp__gallery__item__content
+  z-index: 2
+  position: relative
+  b
+    font-weight: normal
+    color: #fff
+    font-size: 20px 
+    line-height: 24px
+    display: block
+    margin-bottom: 7px
+    font-family: $medium_font
+  p
+    color: #F8F8F8
+    font-size: 12px
+    line-height: 18px
+    font-family: $light_font 
+.swiper-container
+  height: 100%
+  padding-bottom: 20px
+.about-hotel__wrapp__gallery-wrapp
+  width: 100% 
+.about-hotel__wrapp
+  &:nth-child(odd)
+    display: grid
+    grid-template-columns: 401px 100%
+    justify-content: flex-start
+    .about-hotel__wrapp__text
+      margin-right: 30px
+  &:nth-child(even)
+    display: grid
+    grid-template-columns: 100% 401px
+    justify-content: flex-end
+    .about-hotel__wrapp__text  
+      margin-left: 30px
+.slider-nav
+  margin-top: 40px
+  display: flex
+  justify-content: flex-start
+  align-items: center
+.about-hotel__wrapp__btn 
+  margin-top: 34px  
+  width: 100%
+  height: 64px 
+
+
+// ROOMS
+.about-rooms
+  padding-top: 200px  
+  background: #f8f8f8 
+  .swiper-container
+    padding-bottom: 50px 
+.about-rooms__case
+  margin-bottom: 115px  
+  display: flex
+  align-items: center  
+  &:nth-child(odd) 
+    display: grid
+    grid-template-columns: 400px 100%
+    justify-content: flex-start
+    .about-rooms__case__text
+      margin-right: 60px
+  &:nth-child(even)
+    display: grid    
+    grid-template-columns: 100% 400px
+    justify-content: flex-end
+    .about-rooms__case__text
+      margin-left: 60px
+.about-rooms__case__text 
+  width: 336px 
+  h2
+    margin-bottom: 20px
+  p
+    font-size: 16px  
+    line-height: 27px
+    color: #5A5C5D 
+    font-family: $light_font    
+.about-rooms__case__gallery__item
+  width: 370px 
+  height: auto 
+  margin-right: 30px
+  position: relative
+  background-color: #fff   
+  transition: all 0.3s
+  &:hover
+    box-shadow: 0px 2.72751px 40.9126px rgba(0, 0, 0, 0.15)
+    .about-rooms__case__gallery__item__media:after
+      opacity: 1   
+.about-rooms__case__gallery__item__media
+  width: 100%
+  height: 300px
+  background-repeat: no-repeat
+  background-position: center center
+  background-size: cover
+  position: relative
+  transition: all 0.3s 
+  cursor: pointer
+  &:after
+    transition: all 0.3s 
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(248, 248, 248, 0.7) 
+    background-image: url('../img/hover-room-icon.svg')  
+    background-repeat: no-repeat
+    background-position: center center 
+    opacity: 0
+.about-rooms__case__gallery__item__content
+  padding: 37px 37px 60px 37px
+.about-rooms__case__gallery__item__heading
+  font-size: 20px
+  line-height: 24px
+  color: #141618
+  font-family: $bold_font
+  margin-bottom: 10px
+.about-rooms__case__gallery__item__price
+  font-size: 20px
+  line-height: 24px
+  color: #141618
+  font-family: $bold_font
+  margin-bottom: 25px
+  span
+    vertical-align: baseline
+.about-rooms__case__gallery__item__params
+  margin-bottom: 33px
+.about-rooms__case__gallery__item__param
+  width: 48%
+  display: inline-block
+  p
+    color: #5A5C5D
+    font-size: 12px
+    line-height: 18px
+    font-family: $regular_font
+    margin-bottom: 9px
+  b
+    color: #141618
+    font-size: 16px
+    line-height: 27px
+    font-family: $regular_font
+.about-rooms__case__gallery__item__btn
+  width: 100%
+  height: 64px
+  border: 2px solid #1D1954 
+  background: transparent
+
+
+// REVIEWS
+.reviews
+  padding-top: 180px
+  padding-bottom: 140px   
+.reviews__nav
+  display: flex
+  justify-content: flex-start
+  align-items: center
+.reviews__nav__wrapp
+  margin-left: 85px
+  display: flex
+  justify-content: flex-start
+  align-items: center
+.reviews-nav-progress 
+  width: 60px
+  height: 2px
+  background-color: rgba(55, 57, 59, 1)
+  margin-left: 25px
+  margin-right: 25px 
+.reviews__list
+  margin-top: 85px
+  width: 132%
+  padding-bottom: 60px   
+.reviews__item
+  width: 370px
+  margin-right: 30px
+  transition: all 0.2s
+  cursor: pointer 
+  &:hover
+    box-shadow: 0px 8px 20px -12px rgba(0,0,0,0.28)   
+.reviews__item__img
+  width: 100%
+  height: 189px
+  background-repeat: no-repeat
+  background-position: center center
+  background-size: cover
+.reviews__item__content
+  padding: 40px 30px 30px 25px
+  background-color: #f2f2f2 
+.reviews__item__name
+  color: #141618
+  font-size: 16px
+  font-family: $medium_font
+  margin-bottom: 20px
+.reviews__item__text
+  font-size: 16px
+  color: #5a5c5d
+  line-height: 27px
+  font-family: $regular_font
+  margin-bottom: 26px
+  max-height: 105px
+  overflow: hidden
+  margin-bottom: 25px
+.reviews__item__loadmore
+  font-size: 16px
+  color: #141618
+  font-family: $medium_font
+  margin-bottom: 40px
+.reviews__item__date
+  color: #5a5c5d
+  font-size: 12px
+  line-height: 18px
+  font-family: $regular_font  
+
+// FOOTER
+.footer-form
+  height: 845px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  background-color: #f8f8f8 
+.footer-form__img
+  flex-basis: 41%
+  background-image: url('../img/footer-formBg.jpg')
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center center   
+  height: 100%
+.footer-form__content
+  flex-basis: 59%
+  padding: 30px 100px 30px 160px  
+  form
+    margin-top: 38px
+    width: 360px
+    input
+      width: 100%
+      border: 1px solid #5a5c5d
+      height: 64px
+      padding-left: 30px
+      color: #141618
+      font-family: $medium_font
+      font-size: 16px
+      margin-bottom: 10px 
+      background: transparent
+      transition: all 0.3s
+      &:focus
+        outline: none
+        border: 2px solid #1D1954
+        & ~ .footer-form__input__message
+          opacity: 0 !important
+      &::placeholder 
+        color: #5a5c5d   
+      &:hover ~ .footer-form__input__message
+        opacity: 1 
+    button
+      width: 100%
+      height: 64px
+  h2
+    margin-bottom: 19px
+  .footer-form__descr
+    color: #5a5c5d
+    font-size: 16px
+    line-height: 27px
+    font-family: $regular_font  
+.footer-form__input-wrapp input:focus
+  background: #fff
+.footer-form__input-wrapp
+  position: relative
+.footer-form__input__message
+  display: block
+  position: absolute
+  z-index: 2
+  padding: 18px 21px 
+  background: #F8F8F8
+  box-shadow: 0px 25px 30px rgba(0, 0, 0, 0.1)  
+  color: #5A5C5D
+  font-size: 12px
+  font-family: $regular_font 
+  top: -62px
+  left: 29px
+  transition: all 0.5s
+  opacity: 0
+  &:after
+    content: '' 
+    position: absolute 
+    bottom: -15px 
+    left: 16px 
+    border: 8px solid transparent 
+    border-top: 10px solid #fff 
+    opacity: 0.7 
+
+
+.footer__wrapp
+  height: 143px
+  display: flex
+  justify-content: flex-end
+  align-items: center
+  padding-left: 63px
+  padding-right: 63px 
+.footer__logo
+  background-image: url('../img/logo-footer.svg')
+  background-repeat: no-repeat
+  background-position: left center
+  width: 200px 
+  height: 100% 
+  margin-right: auto
+.footer__callback
+  a,p
+    color: #5a5c5d
+    font-size: 12px
+    line-height: 18px
+    font-family: $regular_font
+.footer__info
+  margin-right: 220px
+  img
+    display: inline-block
+    margin-right: 110px
+  p
+    display: inline-block
+    color: #7E7E7E
+    font-size: 12px
+    line-height: 19px
+    font-family: $regular_font
+
+// For navigate elements 
+.about-hotel .slider-nav-prev
+  width: 51px
+  height: 51px
+  text-align: center     
+  line-height: 52px
+  cursor: pointer 
+  transition: all 0.2s   
+  background-color: transparent
+  svg
+    width: 33px
+    height: 12px
+  path
+    transition: all 0.2s
+    fill: #5A5C5D 
+  &:hover
+    background-color: #19191F    
+    path
+      fill: #fff
+.about-hotel .slider-nav-next
+  width: 51px
+  height: 51px
+  text-align: center 
+  line-height: 52px
+  cursor: pointer 
+  transition: all 0.2s
+  background-color: transparent 
+  svg
+    width: 33px
+    height: 12px
+  path
+    transition: all 0.2s
+    fill: #5A5C5D 
+  &:hover
+    background-color: #19191F
+    path
+      fill: #fff
+
+.about-rooms .slider-nav-prev
+  width: 51px
+  height: 51px
+  text-align: center     
+  line-height: 52px
+  cursor: pointer 
+  transition: all 0.2s   
+  background-color: transparent
+  svg
+    width: 33px
+    height: 12px
+  path
+    transition: all 0.2s
+    fill: #BDBDBE
+  &:hover
+    background-color: #19191F    
+    path
+      fill: #fff
+.about-rooms .slider-nav-next
+  width: 51px
+  height: 51px
+  text-align: center 
+  line-height: 52px
+  cursor: pointer 
+  transition: all 0.2s
+  background-color: transparent 
+  svg
+    width: 33px
+    height: 12px
+  path
+    transition: all 0.2s
+    fill: #BDBDBE  
+  &:hover
+    background-color: #19191F
+    path
+      fill: #fff
+
+.reviews .slider-nav-prev
+  width: 51px
+  height: 51px
+  text-align: center     
+  line-height: 52px
+  cursor: pointer 
+  transition: all 0.2s   
+  background-color: transparent
+  svg
+    width: 33px
+    height: 12px
+  path
+    transition: all 0.2s
+    fill: #BDBDBE
+  &:hover
+    background-color: #19191F    
+    path
+      fill: #fff
+.reviews .slider-nav-next
+  width: 51px
+  height: 51px 
+  text-align: center 
+  line-height: 52px
+  cursor: pointer 
+  transition: all 0.2s
+  background-color: transparent 
+  svg
+    width: 33px
+    height: 12px
+  path
+    transition: all 0.2s
+    fill: #BDBDBE  
+  &:hover
+    background-color: #19191F
+    path
+      fill: #fff
+
+
+.slider-nav-progress
+  width: 60px
+  height: 2px 
+  margin-left: 10px 
+  margin-right: 10px
+.swiper-pagination-progressbar
+  position: relative
+
+.about-hotel
+  .slider-nav-progress
+    background-color: rgba(255, 255, 255, 0.3)
+  .swiper-pagination-progressbar .swiper-pagination-progressbar-fill
+    background-color: rgba(255, 255, 255, 0.6)
+.about-rooms
+  .slider-nav-progress
+    background-color: #dedede   
+  .swiper-pagination-progressbar .swiper-pagination-progressbar-fill
+    background-color: #BDBDBE
+.reviews
+  .slider-nav-progress
+    background-color: #9a9b9c  
+    margin-left: 25px
+    margin-right: 25px
+  .swiper-pagination-progressbar .swiper-pagination-progressbar-fill
+    background-color: #37393b
+
+
+.mainModal
+  width: 827px 
+  max-width: 827px
+  background-color: #F8F8F8
+  padding: 70px 60px 79px 60px
+  text-align: left
+  .remodal-close
+    left: auto
+    right: 10px
+    top: 10px
+  form
+    margin-top: 36px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    input
+      width: 100%
+      height: 70px
+      padding-left: 30px 
+      color: #2E2E2E
+      background-color: #fff     
+      font-family: $medium_font
+      vertical-align: bottom 
+      border: none
+      border: 1px solid #1D1954  
+      &:focus
+        outline: none
+        border: 2px solid #1D1954
+        & ~ .main-form__input__message
+          opacity: 0 !important
+      &::placeholder  
+        color: #5a5c5d   
+      &:hover ~ .main-form__input__message
+        opacity: 1
+    .form__input-wrapp
+      display: inline-block
+      width: 49%
+    button
+      width: 49%
+      height: 70px
+      vertical-align: baseline
+.main-form__input__message
+  display: block
+  position: absolute
+  z-index: 2
+  padding: 18px 21px 
+  background-color: #F8F8F8 !important 
+  box-shadow: 0px 25px 30px rgba(0, 0, 0, 0.1)  
+  color: #5A5C5D
+  font-size: 12px
+  font-family: $regular_font 
+  top: -62px
+  left: 29px
+  transition: all 0.5s
+  opacity: 0
+  &:after
+    content: '' 
+    position: absolute 
+    bottom: -15px 
+    left: 16px 
+    border: 8px solid transparent 
+    border-top: 10px solid #fff 
+    opacity: 0.7    
+
+.mainModal__heading
+  color: #2E2E2E
+  font-size: 32px
+  line-height: 38px
+  font-family: $medium_font
+  margin-bottom: 16px
+.mainModal__descr
+  color: #2E2E2E
+  opacity: 0.5
+  font-size: 16px
+  line-height: 24px
+  font-family: $regular_font
+
+.form__input-wrapp
+  position: relative   
+  input
+    border: 1px solid transparent
+    transition: background-color 0.3s ease-in-out 
+  span
+    position: absolute
+    background-color: #1D1954 
+    transition: transform 1s ease 
+  .bottom, .top
+    height: 1px    
+    left: 0
+    right: 0
+    transform: scaleX(0)
+  .left, .right
+    width: 1px 
+    top: 0  
+    bottom: 0 
+    transform: scaleY(0) 
+  .bottom
+    bottom: 0
+    transform-origin: bottom right
+  input:focus ~ .bottom, input:hover ~ .bottom
+    transform-origin: bottom left
+    transform: scaleX(1)
+  .right 
+    right: 0
+    transform-origin: top right
+  input:focus ~ .right, input:hover ~ .right
+    transform-origin: bottom right
+    transform: scaleY(1)
+  .top
+    top: 0
+    transform-origin: top left
+  input:focus ~ .top, input:hover ~ .top
+    transform-origin: top right
+    transform: scaleX(1)
+  .left  
+    left: 0 
+    transform-origin: bottom left 
+  input:focus ~ .left, input:hover ~ .left
+    transform-origin: top left
+    transform: scaleY(1)
+  input:hover ~ .footer-form__input__message
+    opacity: 1
+
+
+.reviewModal
+  text-align: left
+  width: 900px
+  max-width: 900px
+  padding: 77px 65px 34px 65px 
+.reviewModal__info
+  display: flex
+  margin-bottom: 37px
+  justify-content: flex-start
+  align-items: center
+.reviewModal__info__photo
+  width: 66px
+  height: 66px
+  background-size: cover
+  background-position: center center
+  background-repeat: no-repeat
+  margin-right: 20px
+  border-radius: 50%
+.reviewModal__info__name
+  color: #141618
+  font-size: 16px
+  line-height: 19px
+  margin-bottom: 5px
+  font-family: $medium_font
+.reviewModal__info__date
+  color: #5A5C5D
+  font-size: 12px
+  line-height: 18px
+  font-family: $regular_font
+.reviewModal__text
+  font-size: 16px
+  line-height: 27px
+  color: #5A5C5D
+  font-family: $regular_font
+.reviewModal__out
+  margin-top: 40px 
+  text-align: center
+  cursor: pointer
+  img  
+    margin-bottom: 7px
+  span
+    color: #5A5C5D
+    font-size: 12px
+    line-height: 18px
+    display: block
+
+
+.mainModal__slTy
+  text-align: center
+  img
+    margin-bottom: 17px
+.mainModal__slTy__heading
+  font-size: 24px
+  line-height: 32px
+  color: #2E2E2E
+  font-family: $medium_font   
+  margin-bottom: 17px  
+.mainModal__slTy__descr
+  font-size: 16px
+  line-height: 24px
+  color: #2E2E2E
+  opacity: 0.5
+  font-family: $regular_font
+
+.footer-form__slideTy
+  text-align: center
+  b
+    font-size: 42px
+    line-height: 52px
+    color: #000
+    font-family: $medium_font
+    display: block 
+    margin-bottom: 40px
+    margin-top: 50px  
+  p
+    font-size: 16px
+    line-height: 24px
+    color: #000
+    opacity: 0.5  
+    font-family: $light_font  
+
+.banner__content__btns
+  display: none
+.header-out-btn
+  display: none
+.header-mob
+  display: none
+.about-hotel__wrapp__btn.btn_mob
+  display: none
+
+.videoAbout
+  width: 1000px 
+  max-width: 100%
+  padding: 0
+  iframe
+    height: 500px 
+  .remodal-close 
+    left: auto
+    right: 0px
+    top: 0px
+    color: #fff
+    &:before
+      font-size: 35px
+
+
+@media screen and (max-width: 1400px)
+  .header__nav li a:after
+    bottom: 20px   
+  .header__wrapp
+    height: 70px
+  .banner
+    margin-top: 60px
+    height: 680px
+  .header__contact__phone
+    line-height: 70px
+    font-size: 14px
+  .main-btn
+    font-size: 15px
+  .header__nav li a
+    font-size: 15px
+    line-height: 70px
+  .banner_content h1
+    font-size: 63px
+    line-height: 80px
+    margin-bottom: 33px
+  .about-hotel
+    padding-top: 170px
+  h2
+    font-size: 45px  
+    line-height: 56px  
+  .about-rooms__case__gallery__item__media
+    height: 230px 
+  .about-rooms__case__gallery__item__content
+    padding: 32px 37px 40px 37px
+  .reviews
+    padding-top: 150px
+  .reviews__list
+    margin-top: 65px 
+  .reviews__item__content
+    padding: 30px 30px 25px 25px
+  .reviews__item__loadmore
+    margin-bottom: 23px 
+  .header__nav
+    width: 36%
+@media screen and (max-width: 1280px)
+  .mainContainer
+    width: 990px 
+  .header__nav li a
+    font-size: 14px
+  .header__nav
+    width: 43%
+  .header__contact
+    width: 42.75%
+  .header__contact__phone
+    width: 46%
+  .banner_content h1
+    font-size: 57px
+    line-height: 70px
+    margin-bottom: 30px
+  .banner_content h2
+    font-size: 17px
+  .banner
+    height: 640px
+  h2
+    font-size: 38px
+    line-height: 50px  
+  .about-hotel__wrapp__text p
+    font-size: 15px
+    line-height: 25px
+  .slider-nav
+    margin-top: 30px 
+  .about-hotel__wrapp:nth-child(even)
+    grid-template-columns: 90% 385px
+  .about-hotel__wrapp
+    margin-bottom: 135px
+  .about-hotel__wrapp__gallery__item
+    height: 430px
+    padding-top: 340px
+  .about-hotel__wrapp:nth-child(odd)
+    grid-template-columns: 385px 80%
+  .about-rooms__case__gallery__item__content
+    padding: 26px 29px 31px 29px
+  .about-rooms__case__gallery__item__media
+    height: 210px
+  .other-btn
+    font-size: 15px
+  .about-rooms__case__gallery__item
+    width: 340px
+  .about-rooms__case__text p
+    line-height: 25px
+    font-size: 15px
+  .about-rooms__case:nth-child(even)
+    grid-template-columns: 100% 360px 
+  .about-rooms__case:nth-child(even) .about-rooms__case__text
+    width: 300px
+    margin-left: 51px
+  .about-rooms__case:nth-child(even)
+    grid-template-columns: 74% 360px
+  .about-rooms__case:nth-child(odd) .about-rooms__case__text
+    width: 300px
+    margin-right: 51px
+  .about-rooms__case:nth-child(odd)
+    grid-template-columns: 360px 74%
+  .about-rooms__case
+    margin-bottom: 80px  
+  .reviews
+    padding-top: 110px
+  .reviews__item
+    width: 340px
+  .reviews__item__text
+    font-size: 15px
+    line-height: 25px 
+    margin-bottom: 13px
+  .reviews__item__loadmore
+    font-size: 14px
+  .reviews__item__img
+    height: 165px
+  .reviews__list
+    margin-top: 55px
+  .reviews
+    padding-bottom: 100px
+  .footer-form__content
+    padding: 30px 69px 30px 60px
+  .footer-form
+    height: 645px
+  .footer__info
+    margin-right: 110px
+  .about-rooms
+    padding-top: 140px 
+  .banner
+    height: 600px
+
+@media screen and (max-width: 1024px)
+  .mainContainer
+    width: 100%  
+    padding-left: 15px
+    padding-right: 15px
+  .banner video
+    display: none !important 
+  .video__muut
+    display: none
+  .about-hotel  
+    padding-top: 80px
+  .about-hotel__wrapp
+    display: flex
+    flex-direction: column 
+    justify-content: flex-start
+    align-items: flex-start
+  .about-hotel__wrapp:nth-child(odd)
+    display: flex
+  .about-hotel__wrapp:nth-child(even)  
+    display: flex  
+  .about-hotel__wrapp:nth-child(odd) .about-hotel__wrapp__text
+    margin-right: 0
+  .about-hotel__wrapp:nth-child(even) .about-hotel__wrapp__text
+    margin-left: 0
+  .about-hotel__wrapp__text
+    width: 100%
+    margin-bottom: 40px  
+    order: 0
+  .about-hotel__wrapp__text h2
+    br
+      display: none
+  .slider-nav
+    display: none
+  .about-hotel__wrapp__gallery-wrapp
+    order: 1
+  .about-hotel__wrapp
+    margin-bottom: 70px
+  .about-hotel__wrapp__btn
+    display: none  
+  .about-hotel
+    padding-bottom: 30px   
+  .banner
+    height: 700px 
+  .about-rooms__case
+    display: flex
+    flex-direction: column 
+    justify-content: flex-start
+    align-items: flex-start
+  .about-rooms__case:nth-child(odd)
+    display: flex
+  .about-rooms__case:nth-child(even)  
+    display: flex  
+  .about-rooms__case:nth-child(odd) .about-rooms__case__text  
+    margin-right: 0
+    width: 100%
+  .about-rooms__case:nth-child(even) .about-rooms__case__text
+    margin-left: 0
+    width: 100%
+  .about-rooms__case__text
+    width: 100%
+    margin-bottom: 40px  
+    order: 0
+  .about-rooms__case__gallery-wrapp
+    order: 1
+  .about-rooms
+    padding-top: 110px
+  .about-rooms__case__gallery__item__media
+    height: 260px 
+  .about-rooms__case__gallery__item__content
+    padding-bottom: 36px 
+  .about-rooms__case__gallery-wrapp
+    width: 100%
+  .about-rooms__case
+    margin-bottom: 40px
+  h2
+    font-size: 44px
+    line-height: 54px
+  .about-hotel__wrapp__text p, .about-rooms__case__text p
+    font-size: 16px
+    line-height: 28px  
+  .reviews__nav__wrapp
+    display: none
+  .about-rooms__case__gallery__item
+    margin-right: 20px
+  .reviews__item__img
+    height: 200px
+  .reviews__item
+    margin-right: 20px 
+  .reviews
+    padding-top: 75px
+  .footer-form__content
+    padding: 30px 32px 30px 32px
+  .footer-form__content h2
+    font-size: 36px
+    line-height: 54px   
+  .footer__info
+    margin-right: 20px
+  .footer__callback
+    width: 100%
+  .footer__wrapp
+    padding-left: 15px
+    padding-right: 15px
+    flex-wrap: wrap
+  .footer__info img
+    margin-right: 30px
+  .footer__callback
+    text-align: center
+  .reviews__list
+    width: 100%
+  .about-hotel
+    .mainContainer
+      padding-left: 15px
+      padding-right: 0
+    .about-hotel__wrapp__text
+      padding-right: 15px
+  .about-rooms
+    .mainContainer
+      padding-left: 15px
+      padding-right: 0
+    .about-rooms__case__text
+      padding-right: 15px 
+  .reviews
+    .mainContainer
+      padding-right: 0
+    .reviews__nav
+      padding-right: 15px
+  .banner__content__btns
+    display: block
+    margin-top: 30px
+    button
+      width: 400px     
+      display: block
+      height: 65px
+  .banner__content__btn-buy
+    margin-bottom: 20px 
+  .banner__content__btn-video
+    background: transparent
+    color: #F8F8F8
+    font-size: 17px
+    border: 1px solid #F8F8F8
+    font-family: $medium_font
+    img
+      margin-left: 9px
+  .main-btn
+    font-size: 17px
+  .other-btn
+    font-size: 16px 
+  .banner_content
+    justify-content: flex-end
+  .banner_content
+    padding-bottom: 80px 
+  .banner_content h1
+    font-size: 61px
+    line-height: 73px 
+  .banner__shadow
+    background: rgba(0, 0, 0, 0.5)   
+  .header-mob
+    height: 60px
+    position: fixed
+    top: 0
+    left: 0
+    width: 100% 
+    z-index: 20
+    background-color: #fff
+  .header-mob__logo
+    display: inline-block
+    width: 40px
+    height: 28px
+    background-image: url('../img/Logo-mob.svg') 
+    background-position: center center
+    background-repeat: no-repeat
+  .header-mob__wrapp
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    height: 60px
+  .header-mob__logo
+    margin-right: auto
+  .header-mob__callback
+    margin-right: 26px
+  .header-mob__burger
+    padding: 0
+    width: 60px
+    display: block
+    background-color: transparent
+    height: 100%
+    border: none
+    span
+      width: 100%
+      height: 3px
+      background-color: #1D1954
+      display: block
+      &:nth-child(1)
+        margin-bottom: 10px 
+  header 
+    display: none
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100% 
+    z-index: 100
+  .header__wrapp
+    width: 100%
+    height: 100%
+    padding-left: 20px
+    padding-right: 20px
+    padding-top: 20px
+  .header__contact__buy
+    display: none
+  .header__logo
+    height: 40px
+  .header__wrapp
+    display: block
+  .header__logo
+    width: 83px  
+    height: 50px 
+    display: block
+  .header__nav li a
+    line-height: normal
+    height: auto 
+  .header__nav li
+    height: auto
+    display: block
+    width: 100%
+    text-align: center
+  .header__nav
+    display: block
+    width: 100%
+    padding-top: 100px 
+    height: auto
+  .header__nav li a
+    font-size: 24px
+    padding-bottom: 60px
+    margin-right: 20px
+  .header__nav li a:after
+    display: none
+  .header__contact
+    display: block
+    width: 100%
+    height: auto 
+  .header__contact__phone
+    width: 100%
+    line-height: normal
+    font-family: $regular_font
+    font-size: 23px
+    margin-top: 50px
+    img
+      display: none  
+  .header-out-btn
+    display: block
+    position: absolute
+    right: 20px
+    top: 30px 
+  .header-mob
+    display: block
+    box-shadow: 0px 0px 7px -1px rgba(0, 0, 0, 0.3)    
+  .mainModal
+    width: 722px  
+    max-width: 100% 
+    padding: 65px 40px 70px 40px
+  .mainModal__heading
+    font-size: 27px
+  .header__wrapp
+    overflow: auto
+  .reviewModal
+    width: 722px  
+    max-width: 100% 
+    padding: 38px 40px 30px 40px 
+  .form__input-wrapp span
+    display: none !important
+  .about-hotel__wrapp__btn.btn_mob
+    display: block 
+    order: 2
+    width: 400px
+    margin-top: 20px 
+  .videoModal
+    width: 100% 
+    max-width: 100%
+    padding: 60px 30px 30px 30px 
+    iframe
+      height: 400px
+    .remodal-close 
+      left: auto
+      right: 10px
+      top: 10px
+  .footer-form__slideTy b
+    font-size: 33px
+    line-height: 43px
+    margin-bottom: 30px 
+  .footer-form__slideTy p
+    br
+      display: none
+  .about-rooms__case__gallery__item__media:after
+    opacity: 1   
+    background-color: rgba(0, 0, 0, 0.3) 
+    background-image: url(../img/hover-room-icon-white.svg)
+  .videoAbout
+    width: 95%  
+  .videoAbout iframe
+    height: 400px  
+
+@media screen and (max-width: 767px)
+  .header-mob__burger
+    width: 55px
+  .banner_content h1
+    font-size: 49px
+    line-height: 60px
+  .banner
+    height: 670px
+  .banner__content__btns
+    margin-top: 40px
+  .banner__content__btns button
+    height: 60px
+  .main-btn
+    font-size: 15px
+  .banner__content__btn-video
+    font-size: 15px
+  .banner__content__btn-buy
+    margin-bottom: 10px 
+  .banner__content__btns button
+    width: 343px
+  .about-hotel
+    padding-top: 75px
+  h2
+    font-size: 30px
+    line-height: normal
+  .about-hotel__wrapp__text h2
+    margin-bottom: 15px
+  .about-hotel__wrapp__text p, .about-rooms__case__text p
+    font-size: 14px
+    line-height: 25px
+  .about-hotel__wrapp__text
+    margin-bottom: 30px
+  .about-hotel__wrapp
+    margin-bottom: 75px
+  .about-hotel
+    padding-bottom: 15px
+  .about-rooms
+    padding-top: 90px
+  .about-rooms__case__text
+    margin-bottom: 30px 
+  .about-rooms .about-rooms__case__text
+    padding-right: 0  
+  .about-rooms .mainContainer
+    padding-right: 15px 
+  .about-rooms__case__gallery__item
+    margin-right: 0
+    width: 100%  
+    margin-bottom: 25px   
+  .reviews
+    padding-top: 80px
+  .reviews .reviews__nav
+    display: block  
+    h2 
+      text-align: center 
+  .reviews
+    padding-bottom: 60px 
+  .footer-form
+    flex-wrap: wrap
+    height: auto 
+  .footer-form__img
+    flex-basis: 100%
+    height: 400px 
+  .footer__logo
+    width: 100px
+    height: 56px  
+  .footer__info
+    margin-right: 0
+    p
+      display: block 
+      margin-top: 10px
+  .footer__info
+    text-align: right 
+  .footer__info img  
+    margin-right: 0 
+  .footer__wrapp
+    align-items: flex-start 
+    padding-top: 60px 
+    padding-bottom: 20px
+  .footer__callback
+    margin-top: 40px
+  .footer-form
+    padding-bottom: 80px 
+  .header__nav
+    padding-top: 80px 
+  .header__nav li a
+    padding-bottom: 30px
+    font-size: 18px
+  .header__contact__phone
+    font-size: 19px
+    margin-top: 24px  
+  .footer__wrapp
+    height: auto 
+  .mainModal
+    width: 440px
+  .mainModal__heading
+    font-size: 22px  
+    line-height: 30px 
+  .mainModal__descr
+    opacity: 0.8
+    font-size: 15px
+    line-height: 22px 
+  .mainModal form
+    flex-wrap: wrap
+  .mainModal form .form__input-wrapp
+    width: 100%
+  .mainModal form button
+    width: 100%
+    height: 64px 
+  .mainModal form input
+    margin-bottom: 15px 
+    height: 64px
+  .reviewModal
+    width: 100%
+  .reviewModal__text
+    font-size: 15px
+    line-height: 26px 
+  .about-hotel__wrapp__btn.btn_mob
+    width: 343px
+    height: 60px 
+  .about-hotel
+    padding-bottom: 30px
+  .videoModal iframe
+    height: 310px 
+  .mainModal__slTy__heading
+    font-size: 21px
+    line-height: 29px 
+  .mainModal__slTy__descr br
+    display: none  
+  .footer-form__content
+    flex-basis: 100% 
+  .footer-form__slideTy b
+    margin-top: 25px  
+    font-size: 31px
+    line-height: 39px 
+  .banner__content__btns
+    margin-top: 160px   
+  .about-hotel__wrapp__gallery__item:after 
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.550) 0%, rgba(0, 0, 0, 0.107) 48.82%) 
+
+
+@media screen and (max-width: 480px)
+  .header-mob__burger span
+    height: 2px
+  .header-mob__burger
+    width: 37px 
+  .header-mob__burger span:nth-child(1)
+    margin-bottom: 8px
+  .header-mob__callback
+    margin-right: 23px 
+  .banner 
+    height: 690px 
+    background-image: url('../img/banner-mob.jpg')
+  .banner__shadow
+    background: linear-gradient(180.1deg, transparent 59.92%, #141618 99.96%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1))
+  .banner_content h1
+    font-size: 40px
+    line-height: 48px
+    margin-bottom: 22px
+  .banner_content h2
+    font-size: 16px
+    line-height: 24px 
+    br
+      display: none
+  .banner__content__btns
+    margin-top: 30px 
+  .banner__content__btns button
+    width: 100% 
+  .main-btn
+    font-size: 16px
+  .banner__content__btn-video
+    font-size: 16px
+  h2
+    font-size: 24px
+    line-height: 29px
+  .about-hotel__wrapp__text h2
+    margin-bottom: 10px 
+  .about-hotel__wrapp__text p, .about-rooms__case__text p
+    font-size: 13px
+    line-height: 22px
+  .about-hotel__wrapp__text
+    margin-bottom: 22px
+  .about-hotel__wrapp__gallery__item
+    padding-top: 330px 
+  .about-rooms__case__text p
+    color: #5A5C5D
+  .about-rooms__case__gallery__item__media
+    height: 227px  
+  .about-rooms__case__gallery__item__content
+    padding: 35px 34px 43px
+  .about-rooms__case__gallery__item__heading
+    font-size: 18px
+    line-height: 22px
+    margin-bottom: 11px
+  .about-rooms__case__gallery__item__price
+    font-size: 18px
+    line-height: 22px 
+  .about-rooms__case__gallery__item__param p
+    margin-bottom: 7px
+  .about-rooms__case__gallery__item__params
+    margin-bottom: 26px
+  .about-rooms__case__gallery__item
+    margin-bottom: 30px 
+  .reviews__list
+    margin-top: 25px 
+  .reviews__item__img
+    height: 175px
+  .reviews__item
+    width: 320px
+  .reviews__item__text
+    font-size: 13px
+    line-height: 19px
+    max-height: 75px
+    margin-bottom: 17px 
+  .reviews
+    padding-bottom: 40px 
+  .footer-form__content
+    flex-basis: 100%
+    padding: 26px 15px 90px 15px
+  .footer-form__content form
+    width: 100%
+  .footer-form__content h2
+    font-size: 24px
+    line-height: 29px
+    margin-bottom: 16px
+    br
+      display: none
+  .footer-form__content .footer-form__descr
+    font-size: 13px
+    line-height: 24px
+  .footer-form__content form
+    margin-top: 17px
+  .footer-form__content form input
+    font-size: 14px
+  .footer-form
+    padding-bottom: 0
+  .footer__logo
+    width: 50px
+    height: 34px
+    background-size: 50px 
+  .footer__info p
+    font-size: 11px
+    line-height: 18px 
+  .footer__callback
+    display: flex
+    justify-content: space-between
+    align-items: center
+  .footer__callback p
+    order: 0
+  .footer__callback a
+    order: 1
+  .footer__wrapp
+    padding-bottom: 45px  
+  .mainModal
+    width: 99%
+    padding: 60px 20px 60px 20px
+  .mainModal__heading
+    font-size: 18px
+    line-height: 27px
+  .mainModal__descr
+    font-size: 14px
+    line-height: 22px 
+  .mainModal form input
+    font-size: 14px
+  .mainModal form
+    margin-top: 21px  
+  .reviewModal
+    padding: 30px 20px 33px 20px
+  .reviewModal__info__photo
+    width: 56px
+    height: 56px
+    margin-right: 15px
+  .reviewModal__info
+    margin-bottom: 23px
+  .reviewModal__text
+    font-size: 14px
+    line-height: 22px 
+  .about-hotel__wrapp__btn.btn_mob
+    width: 96%  
+    margin-right: 15px
+  .header__logo
+    width: 40px
+    height: 28px
+    background-size: 40px
+  .header__nav
+    padding-top: 60px 
+  .header-out-btn
+    top: 25px 
+  .videoModal
+    padding: 55px 10px 15px 10px
+  .videoModal iframe
+    height: 230px 
+  .mainModal__slTy__heading br
+    display: none
+  .mainModal__slTy__heading
+    font-size: 18px
+    line-height: 25px 
+  .mainModal__slTy__descr
+    font-size: 14px
+    line-height: 21px  
+  .footer-form__slideTy b
+    font-size: 27px
+    line-height: 37px  
+  .footer-form__slideTy p
+    font-size: 15px
+    line-height: 23px   
+  .banner__content__btns
+    margin-top: 205px
+  .videoAbout
+    width: 95%  
+  .videoAbout iframe
+    height: 280px      
+
+@media screen and (max-width: 369px)
+  .reviews__item
+    width: 280px
+
+
+
